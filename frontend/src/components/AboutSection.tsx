@@ -1,6 +1,6 @@
 export function AboutSection() {
   return (
-    <section className="py-24 bg-surface-container-low/60 border-y border-outline-variant/30" id="madagascar">
+    <section data-reveal className="py-24 bg-surface-container-low/60 border-y border-outline-variant/30" id="madagascar">
       <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-12 gap-16 items-center">
         <div className="col-span-6 relative">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] border border-white">

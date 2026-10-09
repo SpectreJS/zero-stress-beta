@@ -2,7 +2,7 @@ import { destinationCards } from '../data'
 
 export function DestinationSection() {
   return (
-    <section className="py-28 px-8 max-w-[1440px] mx-auto" id="destinations">
+    <section data-reveal className="py-28 px-8 max-w-[1440px] mx-auto" id="destinations">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
           <div className="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-widest mb-3">
@@ -18,7 +18,7 @@ export function DestinationSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {destinationCards.map((card) => (
-          <div key={card.title} className="group relative rounded-3xl overflow-hidden h-[540px] shadow-lg border border-outline-variant/30 flex flex-col justify-between p-6 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+          <div data-reveal key={card.title} className="group relative rounded-3xl overflow-hidden h-[540px] shadow-lg border border-outline-variant/30 flex flex-col justify-between p-6 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
             <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={card.title} src={card.image} />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050B14] via-[#050B14]/40 to-transparent" />
             <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

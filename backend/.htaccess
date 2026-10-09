@@ -1,0 +1,9 @@
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "POST, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type, X-Requested-With"
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_METHOD} OPTIONS
+  RewriteRule ^ - [R=204,L]
+</IfModule>
