@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 
 import { AboutSection } from './components/AboutSection'
+import { Cinema } from './components/Cinema'
+import { Contact } from './components/Contact'
 import { CTASection } from './components/CTASection'
 import { CustomTripSection } from './components/CustomTripSection'
 import { DestinationSection } from './components/DestinationSection'
 import { ExperienceSection } from './components/ExperienceSection'
 import { Footer } from './components/Footer'
-import { GallerySection } from './components/GallerySection'
 import { Header } from './components/Header'
 import { HeroSection } from './components/HeroSection'
 import { ServicesSection } from './components/ServicesSection'
@@ -43,11 +44,12 @@ function App() {
         <HeroSection activeSlide={activeSlide} setActiveSlide={setActiveSlide} />
         <DestinationSection />
         <AboutSection />
+        <Cinema />
         <ExperienceSection />
         <CustomTripSection />
-        <GallerySection />
         <ServicesSection />
         <TestimonialsSection />
+        <Contact />
         <CTASection />
       </main>
 

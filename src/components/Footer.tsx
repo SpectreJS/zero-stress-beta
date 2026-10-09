@@ -1,11 +1,11 @@
 export function Footer() {
   return (
     <footer className="docked full-width relative bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface border-t border-outline/20 dark:border-outline-variant/30">
-      <div className="max-w-7xl mx-auto px-8 pt-20 pb-12 flex flex-col justify-between">
+      <div className="max-w-[1440px] mx-auto px-8 pt-20 pb-12 flex flex-col justify-between">
         <div className="grid grid-cols-12 gap-12 pb-16 border-b border-outline/20">
           <div className="col-span-4 flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <img alt="Zero Stress Travel" className="h-12 w-auto object-contain filter drop-shadow" src="/zero-logo.webp" />
+              <img alt="Zero Stress Travel" className="h-12 w-auto object-contain filter drop-shadow" src="/zero-logo.png" />
               <span className="font-headline-lg text-headline-lg font-bold text-inverse-on-surface dark:text-on-surface">Zero Stress Travel</span>
             </div>
             <p className="font-body-md text-body-md text-surface-variant/80 dark:text-on-surface-variant max-w-sm">

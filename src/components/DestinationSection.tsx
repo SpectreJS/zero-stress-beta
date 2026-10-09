@@ -2,7 +2,7 @@ import { destinationCards } from '../data'
 
 export function DestinationSection() {
   return (
-    <section className="py-28 px-8 max-w-7xl mx-auto" id="destinations">
+    <section className="py-28 px-8 max-w-[1440px] mx-auto" id="destinations">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
           <div className="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-widest mb-3">

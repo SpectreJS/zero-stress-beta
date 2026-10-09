@@ -3,7 +3,7 @@ import { serviceRows } from '../data'
 export function ServicesSection() {
   return (
     <section className="py-28 bg-surface-container-low/50 border-t border-outline-variant/30" id="services">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-[1440px] mx-auto px-8">
         <div className="flex items-end justify-between mb-16">
           <div>
             <div className="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-widest mb-3">

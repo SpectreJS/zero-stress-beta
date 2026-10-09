@@ -1,7 +1,7 @@
 export function AboutSection() {
   return (
     <section className="py-24 bg-surface-container-low/60 border-y border-outline-variant/30" id="madagascar">
-      <div className="max-w-7xl mx-auto px-8 grid grid-cols-12 gap-16 items-center">
+      <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-12 gap-16 items-center">
         <div className="col-span-6 relative">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] border border-white">
             <img className="w-full h-full object-cover" alt="Madagascar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3qvTeP-gp5zY43yblb5zrGpQiQVDPCgqg48g7eermB05pmgbTRG4CtkOMvg0qV4JkXP9BICepjzcsL_HyzVQPmCklifvjqk-ktYaQfR_a3A3If7Jb3Y00-cQH0sF6XImvxIiu8f7qBBhrNDsLtjJFIoUB_IRgbHa3IP5BaIp0vt4KnOlirpd75j05CwopMqwIL4SyPrpG2mIxf8L4epbw6n0UeBGniX8PRGvTlAzx" />

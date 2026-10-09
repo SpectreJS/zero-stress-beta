@@ -3,7 +3,7 @@ export function CustomTripSection() {
     <section className="py-32 relative bg-[#050B14] text-surface-container-lowest overflow-hidden" id="sur-mesure">
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full custom-gradient-brand opacity-20 blur-[130px] pointer-events-none" />
       <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full bg-primary opacity-20 blur-[130px] pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full custom-glass-dark border border-secondary-container/30 text-secondary-container font-label-sm text-label-sm uppercase tracking-widest mb-4">
             <span>HAUTE COUTURE DU VOYAGE</span>

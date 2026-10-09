@@ -2,7 +2,7 @@ import { galleryPhotos } from '../data'
 
 export function GallerySection() {
   return (
-    <section className="py-28 px-8 max-w-7xl mx-auto">
+    <section className="py-28 px-8 max-w-[1440px] mx-auto">
       <div className="flex items-end justify-between mb-16">
         <div>
           <div className="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-widest mb-3">

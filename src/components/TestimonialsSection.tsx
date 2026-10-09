@@ -2,7 +2,7 @@ import { testimonials } from '../data'
 
 export function TestimonialsSection() {
   return (
-    <section className="py-28 px-8 max-w-7xl mx-auto">
+    <section className="py-28 px-8 max-w-[1440px] mx-auto">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-widest mb-3">
           <span className="w-1.5 h-1.5 rounded-full bg-secondary-container" />
