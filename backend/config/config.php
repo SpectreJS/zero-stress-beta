@@ -50,7 +50,11 @@ function env(string $key, mixed $default = null): mixed
 {
     global $envValues;
 
-    $value = $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key) ?? $envValues[$key] ?? $default;
+    $value = $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key);
+
+    if ($value === false || $value === null) {
+        $value = $envValues[$key] ?? $default;
+    }
 
     if (is_string($value) && strtolower($value) === 'false') {
         return false;

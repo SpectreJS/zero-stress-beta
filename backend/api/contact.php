@@ -37,7 +37,6 @@ $requiredFields = [
     'phone',
     'traveler_count',
     'travel_type',
-    'message',
 ];
 
 $errors = [];
@@ -50,13 +49,15 @@ foreach ($requiredFields as $field) {
         $errors[$field] = 'Adresse e-mail invalide.';
     }
 
-    if ($field === 'message' && strlen($normalized[$field]) < 10) {
-        $errors[$field] = 'Le message est trop court.';
-    }
-
     if (in_array($field, ['first_name', 'last_name', 'email', 'phone', 'traveler_count', 'travel_type'], true) && $normalized[$field] === '') {
         $errors[$field] = 'Ce champ est obligatoire.';
     }
+}
+
+$normalized['message'] = sanitize_string((string) ($data['message'] ?? ''));
+
+if ($normalized['message'] !== '' && strlen($normalized['message']) < 10) {
+    $errors['message'] = 'Le message est trop court.';
 }
 
 if (!empty($errors)) {

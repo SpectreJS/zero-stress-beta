@@ -211,7 +211,6 @@ export function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                required
                 placeholder="Précisez vos dates idéales, exigences diététiques, hébergements recherchés (villas avec piscine, bivouacs de luxe), transferts aériens ou célébrations particulières..."
                 className="w-full bg-white/5 border border-white/15 rounded-2xl px-5 py-3.5 text-white placeholder-white/40 focus:border-primary-container focus:bg-white/10 focus:outline-none transition-all resize-none"
               />
