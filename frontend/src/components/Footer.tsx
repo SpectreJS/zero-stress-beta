@@ -1,57 +1,66 @@
 export function Footer() {
-  return (
-    <footer className="docked full-width relative bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface border-t border-outline/20 dark:border-outline-variant/30">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-20 pb-12 flex flex-col justify-between">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-8 md:gap-12 pb-12 md:pb-16 border-b border-outline/20">
-          <div className="xl:col-span-4 flex flex-col gap-6">
-            <div className="flex items-center gap-3">
-              <img alt="Zero Stress Travel" className="h-12 w-auto object-contain filter drop-shadow" src="/zero-logo.png" />
-            </div>
-            <p className="font-body-md text-body-md text-surface-variant/80 dark:text-on-surface-variant max-w-sm">
-              L'agence de voyage sur-mesure spécialiste des circuits nationaux à Madagascar et des voyages d'exception à l'international. Zéro stress, zéro imprévu.
-            </p>
-            <p className="font-label-lg text-label-lg font-bold text-secondary-container tracking-wide">Travel more. Stress less.</p>
-          </div>
+	return (
+		<footer className="docked full-width relative bg-inverse-surface border-t border-outline/20">
+			<div className="max-w-7xl mx-auto px-8 pt-20 pb-12 flex flex-col justify-between">
+				{/* Top Row Footer */}
+				<div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-outline/20">
+					{/* Brand identity */}
+					<div className="md:col-span-5 space-y-4">
+						<div className="font-headline-lg text-headline-lg font-bold text-inverse-on-surface flex items-center gap-3">
+							<a className="flex items-center gap-3.5 group" href="#">
+								<img
+									alt="Zero Stress Travel Logo"
+									className="h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-md"
+									src="/zero-logo.png"
+								/>
+							</a>
 
-          <div className="xl:col-span-2 flex flex-col gap-4">
-            <p className="font-label-sm text-label-sm uppercase tracking-widest text-outline-variant font-bold">Destinations</p>
-            <ul className="flex flex-col gap-2.5 font-body-md text-body-md">
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#destinations"><span className="text-secondary-container font-semibold">National :</span> Madagascar Signature</a></li>
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#destinations"><span className="text-primary-fixed font-semibold">International :</span> Afrique Sauvage</a></li>
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#destinations"><span className="text-primary-fixed font-semibold">International :</span> Océan Indien</a></li>
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#destinations"><span className="text-primary-fixed font-semibold">International :</span> World Expeditions</a></li>
-            </ul>
-          </div>
+						</div>
+						<p className="text-surface-variant/80 font-body-md text-body-md max-w-sm">
+							La haute couture du voyage dépaysant. Éliminez la moindre trace de logistique et savourez l'immensité du monde en toute quiétude.
+						</p>
+						<div className="pt-2 text-primary-fixed font-label-sm text-label-sm uppercase tracking-widest flex items-center gap-2">
+							<span className="material-symbols-outlined text-[16px]">verified</span>
+							<span>Membre officiel de l'Élite des Agences de Voyage Awwwards</span>
+						</div>
+					</div>
 
-          <div className="xl:col-span-2 flex flex-col gap-4">
-            <p className="font-label-sm text-label-sm uppercase tracking-widest text-outline-variant font-bold">L'Agence</p>
-            <ul className="flex flex-col gap-2.5 font-body-md text-body-md">
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#sur-mesure">Sur-Mesure VIP</a></li>
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#experiences">Expériences</a></li>
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#services">Conciergerie 24/7</a></li>
-              <li><a className="text-surface-variant/80 dark:text-on-surface-variant hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors" href="#madagascar">Notre Équipe</a></li>
-            </ul>
-          </div>
+					{/* Links column 1 */}
+					<div className="md:col-span-3 space-y-3">
+						<span className="font-label-sm text-label-sm uppercase tracking-wider text-inverse-on-surface block mb-4">Expéditions Clés</span>
+						<ul className="space-y-2.5 font-body-md text-body-md">
+							<li><a className="text-inverse-primary font-medium hover:text-primary-fixed transition-colors" href="#">Madagascar Signature</a></li>
+							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Afrique Sauvage</a></li>
+							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Océan Indien</a></li>
+							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Expéditions Privées</a></li>
+						</ul>
+					</div>
 
-          <div className="xl:col-span-4 flex flex-col gap-5">
-            <p className="font-label-sm text-label-sm uppercase tracking-widest text-outline-variant font-bold">Contact</p>
-            <div className="flex flex-col gap-3 text-surface-variant/80 dark:text-on-surface-variant font-body-md text-body-md">
-              <a href="tel:+261200000000" className="hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors">+261 20 000 00 00</a>
-              <a href="mailto:bonjour@zerostresstravel.com" className="hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors">bonjour@zerostresstravel.com</a>
-              <p>Conciergerie et devis personnalisés disponibles 7j/7.</p>
-            </div>
-          </div>
-        </div>
+					{/* Links column 2 & Contacts */}
+					<div className="md:col-span-4 space-y-3">
+						<span className="font-label-sm text-label-sm uppercase tracking-wider text-inverse-on-surface block mb-4">Services Dédiés</span>
+						<ul className="space-y-2.5 font-body-md text-body-md">
+							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Conciergerie 24/7</a></li>
+							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Politique de Confidentialité</a></li>
+							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Mentions Légales</a></li>
+						</ul>
+						<div className="pt-4 text-surface-variant/80 font-body-sm text-body-sm">
+							<span>Permanence VIP : </span>
+							<a className="text-primary-fixed hover:underline font-semibold" href="tel:+33189456789">+33 1 89 45 67 89</a>
+						</div>
+					</div>
+				</div>
 
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-outline-variant/80 dark:text-on-surface-variant">
-          <p className="font-body-sm text-body-sm text-center md:text-left">© 2025 Zero Stress Travel — Tous droits réservés.</p>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-body-sm">
-            <a href="#" className="hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors">Politique</a>
-            <a href="#" className="hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-inverse-on-surface dark:hover:text-on-surface transition-colors">Plan du site</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  )
+				{/* Bottom Copyright Row */}
+				<div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-surface-variant/80 font-body-sm text-body-sm gap-4">
+					<p>© 2024 Zero Stress Travel. All rights reserved. Travel more. Stress less.</p>
+					<div className="flex items-center space-x-6">
+						<a className="hover:text-primary-fixed transition-colors" href="#">Instagram</a>
+						<a className="hover:text-primary-fixed transition-colors" href="#">LinkedIn VIP</a>
+						<a className="hover:text-primary-fixed transition-colors" href="#">Le Carnet Privé</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	);
 }
