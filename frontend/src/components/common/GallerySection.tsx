@@ -1,4 +1,4 @@
-import { galleryPhotos } from '../data'
+import { galleryPhotos } from '../../data'
 
 export function GallerySection() {
   return (

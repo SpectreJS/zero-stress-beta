@@ -1,40 +1,29 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Route, Routes } from 'react-router-dom'
 
-import { AboutSection } from './components/AboutSection'
-import { Cinema } from './components/Cinema'
-import { Contact } from './components/Contact'
+import { AboutSection } from './components/destinations/AboutSection'
+import { Cinema } from './components/destinations/Cinema'
+import { Contact } from './components/common/Contact'
 // import { CTASection } from './components/CTASection'
-import { CustomTripSection } from './components/CustomTripSection'
-import { DestinationSection } from './components/DestinationSection'
-import { ExperienceSection } from './components/ExperienceSection'
-import { Footer } from './components/Footer'
-import { Header } from './components/Header'
-import { HeroSection } from './components/HeroSection'
-import { ServicesSection } from './components/Faq'
-import { TestimonialsSection } from './components/TestimonialsSection'
-import { HubChat } from './components/HubChat'
+import { CustomTripSection } from './components/destinations/CustomTripSection'
+import { DestinationSection } from './components/destinations/DestinationSection'
+import { ExperienceSection } from './components/destinations/ExperienceSection'
+import { HeroSection } from './components/destinations/HeroSection'
+import { Layout } from './components/layout/Layout'
+import { ServicesSection } from './components/destinations/Faq'
+import { TestimonialsSection } from './components/destinations/TestimonialsSection'
+import { HubChat } from './components/widget/HubChat'
 import { heroSlides } from './data'
+import DetailProjet from './pages/detailProjet'
+import ListProjet from './pages/ListProjet'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function App() {
+function HomePage() {
   const appRef = useRef<HTMLDivElement | null>(null)
-  const [headerScrolled, setHeaderScrolled] = useState(false)
   const [activeSlide, setActiveSlide] = useState(0)
-  const [showScrollTop, setShowScrollTop] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHeaderScrolled(window.scrollY > 40)
-      setShowScrollTop(window.scrollY > window.innerHeight * 0.5)
-    }
-
-    handleScroll()
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -103,35 +92,30 @@ function App() {
   }, [])
 
   return (
-    <div ref={appRef} className="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
-      <Header headerScrolled={headerScrolled} />
-
-      <main>
-        <HeroSection activeSlide={activeSlide} setActiveSlide={setActiveSlide} />
-        <DestinationSection />
-        <AboutSection />
-        <Cinema />
-        <ExperienceSection />
-        <CustomTripSection />
-        <ServicesSection />
-        <TestimonialsSection />
-        <Contact />
-        {/* <CTASection /> */}
-      </main>
-      {showScrollTop && (
-        <button
-          type="button"
-          aria-label="Retour en haut"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary-container text-on-primary-container shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-105 hover:shadow-[0_18px_36px_rgba(0,0,0,0.3)]"
-        >
-          <span className="material-symbols-outlined text-2xl">arrow_upward</span>
-        </button>
-      )}
-
+    <>
+      <HeroSection activeSlide={activeSlide} setActiveSlide={setActiveSlide} />
+      <DestinationSection />
+      <AboutSection />
+      <Cinema />
+      <ExperienceSection />
+      <CustomTripSection />
+      <ServicesSection />
+      <TestimonialsSection />
+      <Contact />
+      {/* <CTASection /> */}
       <HubChat />
-      <Footer />
-    </div>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout><HomePage /></Layout>} />
+      <Route path="/detailProjet" element={<Layout><DetailProjet /></Layout>} />
+      <Route path="/listProjet" element={<Layout><ListProjet /></Layout>} />
+      <Route path="*" element={<Layout><HomePage /></Layout>} />
+    </Routes>
   )
 }
 

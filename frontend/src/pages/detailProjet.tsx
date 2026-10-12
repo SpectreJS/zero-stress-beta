@@ -1,3 +1,6 @@
+import { ExperienceSection } from '../components/destinations/ExperienceSection'
+import { Contact } from '../components/common/Contact'
+
 const highlights = [
    {
       title: 'Éco-lodges 5* exclusifs',
@@ -71,8 +74,8 @@ const pricing = [
 export default function DetailProjet() {
    return (
       <div className="min-h-screen bg-background text-on-surface">
-         <section className="relative px-4 pb-16 md:px-12">
-            <div className="relative flex min-h-[85vh] w-full flex-col justify-end overflow-hidden rounded-3xl border border-white/20 p-8 shadow-2xl md:p-16">
+         <section className="relative pb-16">
+            <div className="relative flex min-h-[85vh] w-full flex-col justify-end overflow-hidden p-8 shadow-2xl md:p-16">
                <img
                   alt="Madagascar Sanctuaire et Baobabs"
                   className="absolute inset-0 h-full w-full object-cover object-center brightness-[0.92] contrast-[1.05]"
@@ -151,8 +154,8 @@ export default function DetailProjet() {
                </div>
             </div>
          </section>
-
-         <section className="mx-auto max-w-7xl px-6 pb-4 pt-32 md:px-16">
+         
+         <section className="mx-auto max-w-7xl px-6 md:px-16">
             <nav className="flex items-center space-x-2 font-label-md text-label-md text-on-surface-variant">
                <a className="flex items-center gap-1 transition-colors hover:text-primary" href="#">
                   <span className="material-symbols-outlined text-[15px]">home</span>
@@ -203,54 +206,7 @@ export default function DetailProjet() {
             </div>
          </section>
 
-         <section className="mx-auto max-w-7xl px-6 py-16 md:px-12">
-            <div className="mb-10 flex flex-col justify-between md:flex-row md:items-end">
-               <div>
-                  <span className="font-label-md text-label-md uppercase tracking-wider text-primary">Perspectives Visuelles</span>
-                  <h2 className="mt-1 font-headline-lg text-headline-lg font-bold text-on-surface">Écrins &amp; atmosphères immortalisées</h2>
-               </div>
-               <p className="mt-2 max-w-md font-body-sm text-body-sm text-on-surface-variant md:mt-0">
-                  Des eaux saphir de Nosy Tanikely aux cathédrales végétales du Menabe, chaque image raconte un instant rare.
-               </p>
-            </div>
-
-            <div className="grid h-auto grid-cols-1 gap-6 md:h-[620px] md:grid-cols-12">
-               <div className="group relative h-80 overflow-hidden rounded-3xl shadow-md md:col-span-7 md:h-full">
-                  <img
-                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                     src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
-                     alt="Allée des Baobabs"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
-                  <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
-                     <div>
-                        <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary-container">Canopée Millénaire</span>
-                        <h4 className="font-headline-md text-headline-md font-bold text-surface-container-lowest">L&apos;Allée des Baobabs à l&apos;Heure Dorée</h4>
-                     </div>
-                     <span className="rounded-full bg-white/10 px-3 py-1 font-label-sm text-label-sm text-white">20°15&apos;04&quot;S</span>
-                  </div>
-               </div>
-
-               <div className="grid h-full grid-cols-2 gap-6 md:col-span-5">
-                  {[
-                     ['Sanctuaire Marin', 'Lagons Cristallins', 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80'],
-                     ['Faune Protégée', 'Maki Catta en Liberté', 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80'],
-                     ['Hôtellerie Privée', 'Villas sur Pilotis', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80'],
-                     ['Nuit Étoilée', 'Bivouac d&apos;Exception', 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80'],
-                  ].map(([label, title, src], index) => (
-                     <div key={label + title} className="group relative h-64 overflow-hidden rounded-2xl shadow-sm md:h-auto">
-                        <img className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src={src} alt={title} />
-                        <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/70 to-transparent" />
-                        <div className="absolute bottom-4 left-4 right-4">
-                           <span className="block font-label-sm text-label-sm uppercase text-primary-fixed">{label}</span>
-                           <p className="font-headline-sm text-[16px] font-semibold text-white">{title}</p>
-                        </div>
-                        {index === 3 && <span className="absolute right-4 top-4 rounded-full bg-white/10 px-2 py-1 text-[10px] uppercase tracking-wider text-white">Nuit</span>}
-                     </div>
-                  ))}
-               </div>
-            </div>
-         </section>
+       <ExperienceSection />
 
          <section className="mx-auto max-w-7xl px-6 md:px-12 my-6">
             <div className="glass-specular grid grid-cols-2 gap-6 rounded-3xl p-6 shadow-sm divide-y divide-outline-variant/30 md:grid-cols-5 md:divide-x md:divide-y-0 md:p-8">
@@ -399,106 +355,6 @@ export default function DetailProjet() {
             </div>
          </section>
 
-         <section className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16 md:px-12" id="reservation">
-            <div className="relative overflow-hidden rounded-3xl border border-outline-variant/40 bg-surface-container-low p-8 shadow-xl md:p-14">
-               <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary-container/10 blur-3xl" />
-
-               <div className="relative z-10 mb-10 max-w-2xl">
-                  <span className="mb-1 block font-label-md text-label-md uppercase tracking-wider text-primary">Réservation sérénité</span>
-                  <h2 className="font-headline-lg text-headline-lg font-bold text-on-surface">Initiez votre voyage sans engagement</h2>
-                  <p className="mt-2 font-body-md text-body-md text-on-surface-variant">
-                     Remplissez ces quelques repères. Un travel designer dédié vous contacte sous 2 heures avec un projet sur-mesure chiffré.
-                  </p>
-               </div>
-
-               <form className="relative z-10 space-y-6">
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                     <div>
-                        <label className="mb-2 block font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Prénom &amp; Nom *</label>
-                        <input
-                           className="w-full rounded-2xl border border-outline-variant/40 bg-surface-container-lowest px-5 py-3.5 text-body-md text-on-surface outline-none transition-all placeholder:text-outline focus:border-primary focus:ring-2 focus:ring-primary/20"
-                           placeholder="ex. Alexandre de Rohan"
-                           required
-                           type="text"
-                        />
-                     </div>
-
-                     <div>
-                        <label className="mb-2 block font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Adresse Email *</label>
-                        <input
-                           className="w-full rounded-2xl border border-outline-variant/40 bg-surface-container-lowest px-5 py-3.5 text-body-md text-on-surface outline-none transition-all placeholder:text-outline focus:border-primary focus:ring-2 focus:ring-primary/20"
-                           placeholder="alexandre@domaine.com"
-                           required
-                           type="email"
-                        />
-                     </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                     <div>
-                        <label className="mb-2 block font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Téléphone / WhatsApp</label>
-                        <input
-                           className="w-full rounded-2xl border border-outline-variant/40 bg-surface-container-lowest px-5 py-3.5 text-body-md text-on-surface outline-none transition-all placeholder:text-outline focus:border-primary focus:ring-2 focus:ring-primary/20"
-                           placeholder="+33 6 12 34 56 78"
-                           type="tel"
-                        />
-                     </div>
-
-                     <div>
-                        <label className="mb-2 block font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Dates envisagées</label>
-                        <input
-                           className="w-full rounded-2xl border border-outline-variant/40 bg-surface-container-lowest px-5 py-3.5 text-body-md text-on-surface outline-none transition-all placeholder:text-outline focus:border-primary focus:ring-2 focus:ring-primary/20"
-                           type="date"
-                        />
-                     </div>
-
-                     <div>
-                        <label className="mb-2 block font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Nombre de voyageurs</label>
-                        <select className="w-full rounded-2xl border border-outline-variant/40 bg-surface-container-lowest px-5 py-3.5 text-body-md text-on-surface outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20">
-                           <option>2 Voyageurs</option>
-                           <option>Voyageur Solo</option>
-                           <option>3 à 5 personnes</option>
-                           <option>6+ personnes</option>
-                        </select>
-                     </div>
-                  </div>
-
-                  <div>
-                     <label className="mb-2 block font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Formule souhaitée</label>
-                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                        {['Expédition Signature', 'Haute Couture Immersion', 'Privatisation Complète'].map((plan, idx) => (
-                           <label
-                              key={plan}
-                              className={[
-                                 'flex cursor-pointer items-center gap-3 rounded-xl border p-4 transition-all',
-                                 idx === 1 ? 'border-primary bg-primary/5' : 'border-outline-variant/30 bg-surface-container-lowest hover:border-primary',
-                              ].join(' ')}
-                           >
-                              <input defaultChecked={idx === 0} name="plan" type="radio" className="text-primary focus:ring-primary" />
-                              <span className={['text-body-sm font-medium', idx === 1 ? 'font-bold text-primary' : ''].join(' ')}>{plan}</span>
-                           </label>
-                        ))}
-                     </div>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-between gap-4 pt-4 sm:flex-row">
-                     <div className="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                        <span className="material-symbols-outlined text-[20px] text-secondary">lock</span>
-                        <span>Données confidentielles · Garantie sans relance intempestive</span>
-                     </div>
-
-                     <button
-                        type="submit"
-                        className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-10 py-4 font-label-lg text-label-lg font-bold text-on-primary shadow-xl transition-all duration-300 hover:bg-primary/90 sm:w-auto"
-                     >
-                        <span>Valider ma pré-réservation</span>
-                        <span className="material-symbols-outlined text-[18px]">send</span>
-                     </button>
-                  </div>
-               </form>
-            </div>
-         </section>
-
          <section className="mx-auto max-w-7xl px-6 py-16 md:px-12">
             <div className="mb-10 flex items-end justify-between">
                <div>
@@ -536,6 +392,8 @@ export default function DetailProjet() {
                ))}
             </div>
          </section>
+
+         <Contact />
       </div>
    )
 }

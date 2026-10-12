@@ -1,4 +1,4 @@
-import { destinationCards } from '../data'
+import { destinationCards } from '../../data'
 
 export function DestinationSection() {
   return (

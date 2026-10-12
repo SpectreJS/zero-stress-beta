@@ -1,4 +1,4 @@
-import { experienceCards } from '../data'
+import { experienceCards } from '../../data'
 
 export function ExperienceSection() {
   return (

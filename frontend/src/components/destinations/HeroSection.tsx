@@ -1,4 +1,4 @@
-import { heroSlides } from '../data'
+import { heroSlides } from '../../data'
 
 type HeroSectionProps = {
   activeSlide: number

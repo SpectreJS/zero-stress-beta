@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-import { serviceRows } from '../data'
+import { serviceRows } from '../../data'
 
 export function ServicesSection() {
   const [openItem, setOpenItem] = useState<number | null>(0)
