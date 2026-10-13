@@ -6,8 +6,8 @@
 .gallery-card img,
 .project-hero img,
 img {
-  object-fit: cover;
-  object-position: center;
+	object-fit: cover;
+	object-position: center;
 }
 
 @media (max-width: 992px) {
@@ -200,4 +200,40 @@ img {
 
 .glass-specular {
 	background-color: white;
+}
+
+h1.font-display-hero {
+	font-size: 57px;
+	line-height: 1.2;
+}
+
+.zstress-logo {
+	position: relative;
+}
+
+.top-scroll .zstress-logo {
+	position: absolute;
+	left: 190px;
+	top: 10px;
+	transition: all .3s ease-in-out;
+
+	img {
+		width: 100px;
+		object-fit: cover;
+		height: initial;
+		transition: all .3s ease-in-out;
+	}
+}
+
+.nav-itm {
+	width: 100%;
+	display: flex;
+	gap: 50px;
+	justify-content: flex-end;
+}
+
+.detailProjet-hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

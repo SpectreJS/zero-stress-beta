@@ -29,7 +29,7 @@ export default function DetailProjet() {
 
   return (
     <div className="min-h-screen bg-background text-on-surface">
-      <section className="relative mb-16">
+      <section className="detailProjet-hero min-h-[860px] md:min-h-[830px] h-auto relative mb-16">
         <img
           alt={project.title}
           className="absolute inset-0 h-full w-full object-cover object-center brightness-[0.92] contrast-[1.05]"
@@ -44,15 +44,8 @@ export default function DetailProjet() {
         <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-inverse-surface/70 via-transparent to-transparent" />
 
-        <div className="relative mx-auto flex min-h-[85vh] w-full max-w-7xl flex-col justify-end overflow-hidden p-8 md:p-16">
-          <div className="relative z-10 max-w-5xl space-y-6">
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-primary-container/40 bg-white/5 px-4 py-1.5 text-primary-fixed">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary-fixed opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-secondary-container" />
-              </span>
-              <span className="font-label-sm text-label-sm uppercase tracking-widest">{project.badge}</span>
-            </div>
+        <div className="relative mx-auto flex w-full max-w-7xl flex-col justify-end overflow-hidden p-8 md:p-16">
+          <div className="">
 
             <div className="space-y-3">
               <div className="flex items-center gap-2 font-label-lg text-label-lg text-surface-variant">

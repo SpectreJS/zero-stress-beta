@@ -3,10 +3,15 @@
 ## Structure
 
 - `api/contact.php` : point d’entrée principal pour les demandes de contact.
+- `api/chat/messages.php` : charge l’historique et crée la conversation côté visiteur.
+- `api/chat/send.php` : envoie un message au backend puis vers WhatsApp Business Platform si la configuration Meta est active.
+- `api/chat/whatsapp-webhook.php` : reçoit les réponses WhatsApp et les enregistre dans MySQL.
 - `config/config.php` : configuration de l’application et des variables d’environnement.
 - `includes/Database.php` : connexion MySQL native en PHP.
 - `includes/Response.php` : helper JSON standardisé.
-- `schema/travel_inquiries.sql` : schéma MySQL à exécuter dans la base.
+- `schema/travel_inquiries.sql` : schéma MySQL de base.
+- `schema/chat_tables.sql` : schéma MySQL pour les conversations et messages du chat.
+- `WHATSAPP_CHAT_SETUP.md` : guide de configuration WhatsApp Business Platform et webhook.
 
 ## Déploiement local
 

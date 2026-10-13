@@ -110,7 +110,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout><HomePage /></Layout>} />
-      <Route path="/detailProjet" element={<Navigate to={`/projets/${projects[0]?.slug ?? 'decouverte-madagascar'}`} replace />} />
+      <Route path="/detailProjet" element={<Navigate to={`/detailProjet/${projects[0]?.slug ?? 'decouverte-madagascar'}`} replace />} />
       <Route path="/detailProjet/:slug" element={<Layout><DetailProjet /></Layout>} />
       <Route path="/projets/:slug" element={<Layout><DetailProjet /></Layout>} />
       <Route path="/listProjet" element={<Layout><ListProjet /></Layout>} />
