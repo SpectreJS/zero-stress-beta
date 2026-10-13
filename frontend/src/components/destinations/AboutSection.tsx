@@ -4,7 +4,18 @@ export function AboutSection() {
       <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-12 gap-16 items-center">
         <div className="col-span-6 relative">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] border border-white">
-            <img className="w-full h-full object-cover" alt="Madagascar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3qvTeP-gp5zY43yblb5zrGpQiQVDPCgqg48g7eermB05pmgbTRG4CtkOMvg0qV4JkXP9BICepjzcsL_HyzVQPmCklifvjqk-ktYaQfR_a3A3If7Jb3Y00-cQH0sF6XImvxIiu8f7qBBhrNDsLtjJFIoUB_IRgbHa3IP5BaIp0vt4KnOlirpd75j05CwopMqwIL4SyPrpG2mIxf8L4epbw6n0UeBGniX8PRGvTlAzx" />
+            <img
+              className="h-full w-full object-cover object-center"
+              alt="Paysage de Madagascar aux baobabs et lagons"
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
+              loading="lazy"
+              decoding="async"
+              onError={(event) => {
+                event.currentTarget.src =
+                  'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80'
+                event.currentTarget.onerror = null
+              }}
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050B14]/70 via-transparent to-transparent" />
             <div className="absolute top-8 left-8 custom-glass-card rounded-full px-5 py-2.5 shadow-lg flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse" />

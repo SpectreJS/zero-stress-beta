@@ -1,12 +1,11 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 
 import { AboutSection } from './components/destinations/AboutSection'
 import { Cinema } from './components/destinations/Cinema'
 import { Contact } from './components/common/Contact'
-// import { CTASection } from './components/CTASection'
 import { CustomTripSection } from './components/destinations/CustomTripSection'
 import { DestinationSection } from './components/destinations/DestinationSection'
 import { ExperienceSection } from './components/destinations/ExperienceSection'
@@ -15,7 +14,7 @@ import { Layout } from './components/layout/Layout'
 import { ServicesSection } from './components/destinations/Faq'
 import { TestimonialsSection } from './components/destinations/TestimonialsSection'
 import { HubChat } from './components/widget/HubChat'
-import { heroSlides } from './data'
+import { heroSlides, projects } from './data'
 import DetailProjet from './pages/detailProjet'
 import ListProjet from './pages/ListProjet'
 
@@ -102,7 +101,6 @@ function HomePage() {
       <ServicesSection />
       <TestimonialsSection />
       <Contact />
-      {/* <CTASection /> */}
       <HubChat />
     </>
   )
@@ -112,7 +110,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout><HomePage /></Layout>} />
-      <Route path="/detailProjet" element={<Layout><DetailProjet /></Layout>} />
+      <Route path="/detailProjet" element={<Navigate to={`/projets/${projects[0]?.slug ?? 'decouverte-madagascar'}`} replace />} />
+      <Route path="/detailProjet/:slug" element={<Layout><DetailProjet /></Layout>} />
+      <Route path="/projets/:slug" element={<Layout><DetailProjet /></Layout>} />
       <Route path="/listProjet" element={<Layout><ListProjet /></Layout>} />
       <Route path="*" element={<Layout><HomePage /></Layout>} />
     </Routes>

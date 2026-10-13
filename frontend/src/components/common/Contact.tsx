@@ -243,7 +243,7 @@ export function Contact() {
 								disabled={isSubmitting}
 								className="custom-gradient-brand text-on-primary-fixed font-label-lg text-label-lg font-bold px-10 py-4 rounded-full shadow-[0_12px_36px_rgba(0,196,180,0.35)] hover:scale-105 active:scale-95 transition-all flex items-center gap-3 shrink-0 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
 							>
-								<span>{isSubmitting ? 'Envoi en cours...' : 'Initier mon expédition sans stress'}</span>
+								<span>{isSubmitting ? 'Envoi en cours...' : 'Envoyer'}</span>
 								<span className="material-symbols-outlined text-xl">send</span>
 							</button>
 						</div>

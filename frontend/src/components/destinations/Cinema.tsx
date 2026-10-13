@@ -26,9 +26,15 @@ export function Cinema() {
 				<div className="max-w-6xl mx-auto rounded-3xl overflow-hidden relative shadow-2xl border border-white/10 group bg-[#050B14]">
 					<div className="relative aspect-[16/9] w-full overflow-hidden cursor-pointer">
 						<img
-							src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqZbQ18H9FbrVS3kiNYhJZtnsP18L2ePou6e6SDdxyvWjBD2R_qjfLND-NSz08o5Z5AN5mSmCko8gqW2liJBny0NtShnPW-L-uwrAjo8v8xkxS73DQgR745bmA2i2JSNZXJHfMUcODarjTeK2cmG86Hg_RsDFf4_kj_8Ku64K8rGpu2ixwzSE7_B5pO1Qe9Hue8OgU71hUOunWGmBE86dMx-OBi_yycRs33xBMuiHZ"
+							src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80"
 							alt="Film Cinématique de l'Expédition Madagascar & Terres Préservées"
-							className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+							className="h-full w-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+							loading="lazy"
+							decoding="async"
+							onError={(event) => {
+								event.currentTarget.src = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80'
+								event.currentTarget.onerror = null
+							}}
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-[#050B14] via-[#050B14]/40 to-[#050B14]/60 pointer-events-none" />
 						<div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />

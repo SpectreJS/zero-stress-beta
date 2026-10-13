@@ -1,4 +1,14 @@
+import { Link } from 'react-router-dom'
+import { projects } from '../../data'
+
 export function Footer() {
+	const featuredProjects = [
+		{ label: 'Madagascar Signature', to: `/projets/${projects[0]?.slug ?? 'decouverte-madagascar'}` },
+		{ label: 'Afrique Sauvage', to: `/projets/${projects[1]?.slug ?? 'safari-afrique'}` },
+		{ label: 'Océan Indien', to: `/projets/${projects[2]?.slug ?? 'atolls-ocean-indien'}` },
+		{ label: 'Expéditions Privées', to: '/listProjet' },
+	]
+
 	return (
 		<footer className="docked full-width relative bg-inverse-surface border-t border-outline/20">
 			<div className="max-w-7xl mx-auto px-8 pt-20 pb-12 flex flex-col justify-between">
@@ -7,13 +17,13 @@ export function Footer() {
 					{/* Brand identity */}
 					<div className="md:col-span-5 space-y-4">
 						<div className="font-headline-lg text-headline-lg font-bold text-inverse-on-surface flex items-center gap-3">
-							<a className="flex items-center gap-3.5 group" href="#">
+							<Link className="flex items-center gap-3.5 group" to="/">
 								<img
 									alt="Zero Stress Travel Logo"
 									className="h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-md"
 									src="/zero-logo.png"
 								/>
-							</a>
+							</Link>
 
 						</div>
 						<p className="text-surface-variant/80 font-body-md text-body-md max-w-sm">
@@ -29,10 +39,19 @@ export function Footer() {
 					<div className="md:col-span-3 space-y-3">
 						<span className="font-label-sm text-label-sm uppercase tracking-wider text-inverse-on-surface block mb-4">Expéditions Clés</span>
 						<ul className="space-y-2.5 font-body-md text-body-md">
-							<li><a className="text-inverse-primary font-medium hover:text-primary-fixed transition-colors" href="#">Madagascar Signature</a></li>
-							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Afrique Sauvage</a></li>
-							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Océan Indien</a></li>
-							<li><a className="text-surface-variant/80 hover:text-inverse-on-surface transition-colors" href="#">Expéditions Privées</a></li>
+							{featuredProjects.map(({ label, to }) => (
+								<li key={label}>
+									<Link
+										className={[
+											'transition-colors hover:text-primary-fixed',
+											label === 'Madagascar Signature' ? 'text-inverse-primary font-medium' : 'text-surface-variant/80',
+										].join(' ')}
+										to={to}
+									>
+										{label}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
 

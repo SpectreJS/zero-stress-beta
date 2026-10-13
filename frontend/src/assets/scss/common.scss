@@ -1,0 +1,203 @@
+.hero-bg-slide img,
+.hero-card-slide img,
+#destinations img,
+#experiences img,
+#madagascar img,
+.gallery-card img,
+.project-hero img,
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 992px) {
+	.text-headline-xl {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+	#experiences {
+		padding: 72px 20px 48px !important;
+	}
+
+	#experiences>div:first-child {
+		margin-bottom: 32px;
+	}
+
+	#experiences>div:first-child .inline-flex {
+		margin-bottom: 16px;
+		letter-spacing: 0.18em;
+		font-size: 10px;
+	}
+
+	#experiences>div:first-child h2 {
+		font-size: clamp(2rem, 7vw, 2.8rem);
+		line-height: 1.08;
+	}
+
+	#experiences>div:first-child p {
+		font-size: 1rem;
+		line-height: 1.7;
+		margin-top: 12px;
+	}
+
+	#experiences>div:last-child {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	#experiences [class*='col-span-'] {
+		grid-column: 1 / -1 !important;
+		width: 100% !important;
+		min-height: 290px !important;
+		height: 290px !important;
+		border-radius: 24px;
+	}
+
+	#experiences [class*='col-span-']>div {
+		padding: 20px !important;
+	}
+
+	#experiences [class*='col-span-'] h3 {
+		font-size: clamp(1.55rem, 5vw, 2rem);
+		line-height: 1.15;
+	}
+
+	#experiences [class*='col-span-'] p {
+		font-size: 0.96rem;
+		line-height: 1.55;
+		max-width: 100% !important;
+	}
+
+	#experiences [class*='col-span-'] .material-symbols-outlined {
+		font-size: 1.5rem !important;
+	}
+
+	section:first-of-type {
+		min-height: 680px !important;
+		padding-top: 90px !important;
+	}
+
+	section:first-of-type>div:last-child {
+		padding-top: 0 !important;
+		padding-bottom: 28px !important;
+	}
+
+	section:first-of-type>div:last-child>div {
+		gap: 22px !important;
+		margin-top: 0 !important;
+	}
+
+	section:first-of-type h1 {
+		font-size: clamp(2.7rem, 12vw, 4.2rem) !important;
+		line-height: 0.95 !important;
+		letter-spacing: -0.06em !important;
+	}
+
+	section:first-of-type p[data-hero-badge] {
+		font-size: 1rem !important;
+		line-height: 1.7 !important;
+		max-width: 100% !important;
+	}
+
+	section:first-of-type .custom-glass-dark,
+	section:first-of-type .custom-gradient-brand {
+		width: 100% !important;
+	}
+
+	section:first-of-type .card-carousel {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-top: 8px;
+	}
+
+	section:first-of-type .card-carousel>div {
+		min-height: 360px !important;
+		aspect-ratio: 4 / 5;
+	}
+
+	section:first-of-type .rounded-2xl {
+		padding: 14px !important;
+	}
+
+	section:first-of-type .rounded-2xl h3 {
+		font-size: 1.3rem !important;
+		line-height: 1.2 !important;
+	}
+
+	section:first-of-type .rounded-2xl p {
+		font-size: 0.8rem !important;
+		line-height: 1.5 !important;
+	}
+
+	section:first-of-type .rounded-2xl .flex.gap-2 {
+		gap: 8px !important;
+	}
+
+	section:nth-of-type(4) {
+		padding: 72px 20px 40px !important;
+	}
+
+	section:nth-of-type(4)>div:first-child {
+		margin-bottom: 28px;
+	}
+
+	section:nth-of-type(4)>div:first-child .inline-flex {
+		letter-spacing: 0.16em;
+		font-size: 10px;
+	}
+
+	section:nth-of-type(4)>div:first-child h2 {
+		font-size: clamp(2rem, 7vw, 2.6rem);
+		line-height: 1.1;
+	}
+
+	section:nth-of-type(4) .custom-glass-card {
+		padding: 22px 20px !important;
+		border-radius: 24px;
+	}
+
+	section:nth-of-type(4) .grid.grid-cols-12 {
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+		gap: 22px !important;
+	}
+
+	section:nth-of-type(4) .col-span-4,
+	section:nth-of-type(4) .col-span-8 {
+		grid-column: 1 / -1 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	section:nth-of-type(4) .relative.aspect-square {
+		max-height: 260px;
+		min-height: 260px;
+	}
+
+	section:nth-of-type(4) blockquote {
+		font-size: clamp(1.3rem, 5vw, 1.9rem) !important;
+		line-height: 1.45 !important;
+	}
+
+	section:nth-of-type(4) .flex.justify-between {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 12px;
+	}
+
+	section:nth-of-type(4) .grid.grid-cols-3 {
+		grid-template-columns: 1fr !important;
+		gap: 16px !important;
+	}
+
+	section:nth-of-type(4) .grid.grid-cols-3>div {
+		padding: 18px !important;
+	}
+}
+
+.glass-specular {
+	background-color: white;
+}

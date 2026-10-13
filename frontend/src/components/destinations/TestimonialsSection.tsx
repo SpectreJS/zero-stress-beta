@@ -16,7 +16,17 @@ export function TestimonialsSection() {
         <div className="grid grid-cols-12 gap-12 items-center">
           <div className="col-span-4">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white">
-              <img className="w-full h-full object-cover" alt="Couple luxury travel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYsquR3E1_WZsWzicKWm6fwqk3dCpnJ9GmwqZ6GZtCn8o3UwyjPasiNYwkPT1wGQzeWeezytrgib_MUydoo_gAKUeU546dLyxxDtHEwhT-ox-mQar2jaTFl-VeGPeCkHdwlJ74g5plepj0gEfHkrzI7xSgJF_2cf6sJo3Cx1jG8h0ZWeCi9ZXDZ_n2EFW7g-fMwtIlLNyCMVcszyMtdYGL8HHLG5R0PB_i4GSHweZx" />
+              <img
+                className="h-full w-full object-cover object-center"
+                alt="Couple luxury travel"
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"
+                loading="lazy"
+                decoding="async"
+                onError={(event) => {
+                  event.currentTarget.src = 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80'
+                  event.currentTarget.onerror = null
+                }}
+              />
             </div>
           </div>
           <div className="col-span-8 flex flex-col gap-6">

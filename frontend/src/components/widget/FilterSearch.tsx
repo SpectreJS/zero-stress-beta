@@ -1,13 +1,4 @@
-import { useMemo, useState } from 'react'
-
-const categories = [
-  { value: 'all', label: 'Tous' },
-  { value: 'plage', label: 'Plage & Atolls' },
-  { value: 'aventure', label: 'Aventure & Bush' },
-  { value: 'sanctuaires', label: 'Nature & Sanctuaires' },
-  { value: 'culture', label: 'Culture & Tribus' },
-  { value: 'luxe', label: 'Luxe & Privatisations' },
-]
+import { useState } from 'react'
 
 export function FilterSearch() {
   const [query, setQuery] = useState('')
@@ -15,14 +6,6 @@ export function FilterSearch() {
   const [budget, setBudget] = useState('all')
   const [sort, setSort] = useState('popular')
   const [activeCategory, setActiveCategory] = useState('all')
-
-  const resultsCount = useMemo(() => {
-    if (query || activeCategory !== 'all' || budget !== 'all' || country !== 'all') {
-      return 3
-    }
-
-    return 6
-  }, [query, activeCategory, budget, country])
 
   const resetFilters = () => {
     setQuery('')

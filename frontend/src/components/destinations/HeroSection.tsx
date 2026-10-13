@@ -1,4 +1,4 @@
-import { heroSlides } from '../../data'
+import { fallbackImage, heroSlides } from '../../data'
 
 type HeroSectionProps = {
   activeSlide: number
@@ -9,7 +9,7 @@ export function HeroSection({ activeSlide, setActiveSlide }: HeroSectionProps) {
   const currentSlide = heroSlides[activeSlide]
 
   return (
-    <section className="relative min-h-[860px] md:min-h-[960px] h-auto md:h-screen w-full flex items-center justify-center overflow-hidden bg-on-surface">
+    <section className="relative min-h-[860px] md:min-h-[830px] h-auto md:h-screen w-full flex items-center justify-center overflow-hidden bg-on-surface">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 overflow-hidden" id="hero-bg-container">
           {heroSlides.map((slide, index) => (
@@ -20,7 +20,17 @@ export function HeroSection({ activeSlide, setActiveSlide }: HeroSectionProps) {
                 activeSlide === index ? 'opacity-100' : 'opacity-0',
               ].join(' ')}
             >
-              <img className="w-full h-full object-cover scale-105" alt={slide.alt} src={slide.image} />
+              <img
+                className="h-full w-full scale-105 object-cover object-center"
+                alt={slide.alt}
+                src={slide.image}
+                loading={index === activeSlide ? 'eager' : 'lazy'}
+                decoding="async"
+                onError={(event) => {
+                  event.currentTarget.src = fallbackImage
+                  event.currentTarget.onerror = null
+                }}
+              />
             </div>
           ))}
         </div>
@@ -73,7 +83,17 @@ export function HeroSection({ activeSlide, setActiveSlide }: HeroSectionProps) {
                       activeSlide === index ? 'opacity-100' : 'opacity-0',
                     ].join(' ')}
                   >
-                    <img className="w-full h-full object-cover transform duration-700 group-hover:scale-105" alt={slide.alt} src={slide.image} />
+                    <img
+                      className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                      alt={slide.alt}
+                      src={slide.image}
+                      loading="lazy"
+                      decoding="async"
+                      onError={(event) => {
+                        event.currentTarget.src = fallbackImage
+                        event.currentTarget.onerror = null
+                      }}
+                    />
                   </div>
                 ))}
               </div>
